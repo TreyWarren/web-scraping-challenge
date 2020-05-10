@@ -133,7 +133,7 @@ def browser_scrape_image():
 
 
 
-# Mars Weather
+# Twitter - Mars Weather
 # ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
 
 def browser_scrape_weather():
@@ -159,7 +159,7 @@ def browser_scrape_weather():
 
 
 
-# Mars Hemispheres
+# USGS - Mars Hemispheres
 # ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
 
 def browser_scrape_hemispheres():
