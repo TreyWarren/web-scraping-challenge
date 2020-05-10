@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mars Data</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body style="color:white; background-color:black;">
+  <div class="container">
+    <!-- Jumbo Header -------------------------------------------------------------------------->
+    <div class="jumbotron text-center" style="color:white; background-color:rgb(100, 90, 80);">
+      <h1>Mission to Mars</h1>
+      <p><a class="btn btn-primary btn-lg" style="background-color:rgb(129, 98, 68); border-color: black;" href="/scrape" role="button">Scrape New Data</a></p>
+    </div>
+
+    <!-- Mars Data -------------------------------------------------------------------------->
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Latest Mars News</h1>
+        <h4>{{mars_dict.news_title}}</h4>
+        <p>{{mars_dict.news_paragraph}}</p>
+        <hr>
+      </div>
+    </div>
+
+    <!-- Featured Image -->
+    <div class="row">
+      <div class="col-md-8">
+        <img width=80% src="{{mars_dict.featured_image}}" />
+      </div>
+    
+      <!--Weather-->
+      <div class="col">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Current Weather on Mars</h5>
+            <p class="card-text">{{mars_dict.mars_weather}}</p><br>
+          </div>
+        </div>
+
+        <!--MTML Table-->
+        <div>
+          <h4>Mars Facts</h4>
+          {{mars_dict.html_table|safe}}
+        </div>
+
+      </div>
+
+    <!-- Hemisphere Images -->
+    <div class="row">
+      <div class="col-md-12">
+
+        {% for item in mars_dict.hemisphere_images %}
+        <div class="col-md-6">
+            <div style="margin: 30px;">
+                <img width=80% src="{{item.img_url}}" />
+                <p>{{item.title}}</p>
+            </div>
+        </div>
+        {% endfor %}
+
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+</html>
