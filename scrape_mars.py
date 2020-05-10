@@ -197,13 +197,14 @@ def browser_scrape_hemispheres():
         for result in results: 
             
             # Store title
-            title = result.find('h3').text
+            title = result.find('h3').text.replace(' Enhanced', '')
             
             # Store link that leads to full image website
             image_page_url = result.find('a', class_='itemLink')['href']
             
             # Visit the page that contains the hi-res image
             browser.visit(base_url + image_page_url)
+            sleep(5)
             html = browser.html
             soup = bs(html, 'html.parser')
             
@@ -211,7 +212,7 @@ def browser_scrape_hemispheres():
             image_url = base_url + soup.find('img', class_='wide-image')['src']
             
             # Append the retreived information into a list of dictionaries 
-            hemisphere_image_urls.append({"title" : title, "img_url" : img_url})
+            hemisphere_image_urls.append({"title" : title, "image_url" : image_url})
 
     # Add to master dictionary
     mars_dict["hemisphere_images"] = hemisphere_image_urls

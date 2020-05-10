@@ -11,13 +11,13 @@
 
 <body style="color:white; background-color:black;">
   <div class="container">
-    <!-- Jumbo Header -------------------------------------------------------------------------->
-    <div class="jumbotron text-center" style="color:white; background-color:rgb(100, 90, 80);">
+    <!-- Jumbo Header --------------------------------------------------------------------------------------------------------------------------------------------->
+    <div class="jumbotron text-center" style="color:white; background-color:rgb(112, 79, 60);">
       <h1>Mission to Mars</h1>
-      <p><a class="btn btn-primary btn-lg" style="background-color:rgb(129, 98, 68); border-color: black;" href="/scrape" role="button">Scrape New Data</a></p>
+      <p><a class="btn btn-primary btn-lg" style="background-color:rgb(194, 123, 91); border-color: black;" href="/scrape" role="button">Scrape New Data</a></p>
     </div>
 
-    <!-- Mars Data -------------------------------------------------------------------------->
+    <!-- Mars Data ----------------------------------------------------------------------------------------------------------------------------------------------->
     <div class="row">
       <div class="col-md-12">
         <h1>Latest Mars News</h1>
@@ -27,22 +27,22 @@
       </div>
     </div>
 
-    <!-- Featured Image -->
+    <!-- Featured Image ------------------------------------------>
     <div class="row">
       <div class="col-md-8">
-        <img width=80% src="{{mars_dict.featured_image}}" />
+        <img width=90% src="{{mars_dict.featured_image}}" />
       </div>
     
-      <!--Weather-->
+      <!--Weather------------------------------------------------->
       <div class="col">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">Current Weather on Mars</h5>
-            <p class="card-text">{{mars_dict.mars_weather}}</p><br>
+            <h4 class="card-title">Current Weather on Mars</h4>
+            <p class="card-text">{{mars_dict.mars_weather}}</p><hr>
           </div>
         </div>
 
-        <!--MTML Table-->
+        <!--MTML Table-------------------------------------------->
         <div>
           <h4>Mars Facts</h4>
           {{mars_dict.html_table|safe}}
@@ -50,15 +50,16 @@
 
       </div>
 
-    <!-- Hemisphere Images -->
+    <!-- Hemisphere Images --------------------------------------->
     <div class="row">
       <div class="col-md-12">
-
+        <hr>
         {% for item in mars_dict.hemisphere_images %}
         <div class="col-md-6">
             <div style="margin: 30px;">
-                <img width=80% src="{{item.img_url}}" />
-                <p>{{item.title}}</p>
+              <p>{{item.title}}</p>
+              <img width=80% style="border-radius: 40%;" src="{{item.image_url}}" />
+              <br><br><br>
             </div>
         </div>
         {% endfor %}
