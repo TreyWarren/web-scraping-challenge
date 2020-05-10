@@ -3,6 +3,8 @@ __pycache__/
 *.py[cod]
 *$py.class
 .DS_Store
+scrape_marz.py
+.ipybn_checkpoints
 
 # C extensions
 *.so
