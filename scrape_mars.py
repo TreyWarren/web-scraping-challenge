@@ -209,10 +209,10 @@ def browser_scrape_hemispheres():
             soup = bs(html, 'html.parser')
             
             # Retrieve hi-res image URL
-            image_url = base_url + soup.find('img', class_='wide-image')['src']
+            img_url = base_url + soup.find('img', class_='wide-image')['src']
             
             # Append the retreived information into a list of dictionaries 
-            hemisphere_image_urls.append({"title" : title, "image_url" : image_url})
+            hemisphere_image_urls.append({"title" : title, "img_url" : img_url})
 
     # Add to master dictionary
     mars_dict["hemisphere_images"] = hemisphere_image_urls
